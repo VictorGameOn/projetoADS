@@ -13,28 +13,31 @@
 </head>
 <body>
 	<head>
-		<nav>
+		<nav class="nav">
 			<div>
-				<img src="../img/gatLogo.png">
+				<img class="img" src="../img/gatLogo.png">
 			</div>
 			<div class="lista">
 				<ul>
-					<li>ADMIN</li>
 					<li>
 						<a href="../BackEnd/logout.php">Sair	</a>
 					</li>	
 				</ul>
 			</div>
 		</nav>
+
 	<section class="sectionBusca">
 		<div class="conteinerFomulario">
 			<form>
-				<input class="inputText" type="text" name="consulta" placeholder="Consulte Serviço" required="">
+				<input class="inputText" type="text" name="consulta" placeholder="Consulte Serviço">
 				<input class="inputBotao" type="submit" name="pesquisar" value="Consultar">
-				<button>Imprimir</button>
+				<button><a href="../BackEnd/pdf_adm.php" >Imprimir</a></button>
 			</form>
 		</div>
-	</section>	
+	</section>
+
+<!-----------------TABELA DE RELATÓRIO------------------->
+
 	<section class="tabelaSeviçCliente">
 		<div class="divTabelaServiço">
 			<table class="table">
@@ -50,8 +53,8 @@
 			     </thead>
 
 			     <?php 
-					$sql = "SELECT s.cod_servico, s.modelo_servico, s.imei1_servico, s.imei2_servico, s.cor_servico, s.defeito_servico, s.statos_servico, s.data_time_servico, c.nome_cliente, c.sobrenome_cliente, c.fone1_cliente, c.fone2_cliente, c.email_cliente FROM servico s, cliente c WHERE s.id_cliente = c.id_cliente";
-					$stmt = mysqli_query($conexao, $sql);
+					$_SESSION['sql'] = "SELECT s.cod_servico, s.modelo_servico, s.imei1_servico, s.imei2_servico, s.cor_servico, s.defeito_servico, s.statos_servico, s.data_time_servico, c.nome_cliente, c.sobrenome_cliente, c.fone1_cliente, c.fone2_cliente, c.email_cliente FROM servico s, cliente c WHERE s.id_cliente = c.id_cliente";
+					$stmt = mysqli_query($conexao, $_SESSION['sql']);
 		    		while ($row = mysqli_fetch_array($stmt)){
     			?>
 
@@ -71,6 +74,8 @@
 			   </table>
 		</div>
 	</section>
+
+	
 
 	</head>
 	

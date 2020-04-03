@@ -1,3 +1,7 @@
+<?php
+    session_start();
+    include "../BackEnd/conexao.php";
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -26,7 +30,7 @@
                     if(isset($_SESSION['nao_autenticado'])):
                 ?>
 				<div class="errorLogin">
-					<div class="closeX">X</div>
+					<div class="closeX"><i class="fas fa-times-circle"></i></div>
 					<div class="closeError">Erro!!!! Usuário ou Senha incorreto.</div>
 				</div>
 				<?php

@@ -45,19 +45,19 @@
 						<div class="iconMensagemErrorSucesso errorCorMesnsagemX"><i class="fas fa-exclamation-triangle"></i>   Erro!!!!Usuário ou Senha incorreto.</div>
 					</div>
 					<!--fim mensagem Error -->
-					<form action="../BackEnd/Cadastro_Cliente.php" method="POST">
+					<form action="../BackEnd/cadastrar_cliente.php" method="POST">
 						<!--inputs com nome e sobrenome -->
-						<input class="inputtextMenor" type="text" name="Nome" placeholder="Nome" required="">
-						<input class="inputtextMenor" type="text" name="sobrenome" placeholder="Sobrenome" required=""><br>
+						<input class="inputtextMenor" type="text" name="nome_cliente" placeholder="Nome" required="">
+						<input class="inputtextMenor" type="text" name="sobrenome_cliente" placeholder="Sobrenome" required=""><br>
 						<!--input com o nome de usuario -->
-						<input class="inputtextoMaior" type="text" name="nomeDeUsuario" placeholder="Nome de Usuário" required=""><br>
+						<input class="inputtextoMaior" type="text" name="nickname_cliente" placeholder="Nome de Usuário" required=""><br>
 						<!--input com os numeros de telefone -->
-						<input class="inputtextMenor" type="tel" name="fone1" placeholder="Fone 1" required="">
-						<input class="inputtextMenor" type="tel" name="fone2" placeholder="Fone 2" required=""><br>
+						<input class="inputtextMenor" type="tel" name="fone1_cliente" placeholder="Fone 1" required="">
+						<input class="inputtextMenor" type="tel" name="fone2_cliente" placeholder="Fone 2"><br>
 						<!--input com o e-mail -->
-						<input class="inputtextoMaior" type="email" name="email" placeholder="E-mail" required=""><br>
+						<input class="inputtextoMaior" type="email" name="email_cliente" placeholder="E-mail" required=""><br>
 						<!--input com a senha -->
-						<input class="inputtextoMaior"type="password" name="senha" placeholder="Senha" required=""><br>
+						<input class="inputtextoMaior"type="password" name="senha_cliente" placeholder="Senha" required=""><br>
 						<!--input do botao -->
 						<input class="botaoSubmit" type="submit" name="logar" value="Cadastre-se">
 					</form>

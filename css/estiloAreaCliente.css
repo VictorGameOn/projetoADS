@@ -1,0 +1,154 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+	transition: all 0.8s;
+	box-sizing: border-box;
+	background-color: #eee;
+}
+*{
+	box-sizing: border-box;
+}
+
+header{
+	display: flex;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background-color: #212121;
+	color: #eee;
+	box-sizing: border-box;
+}
+img{
+	width: 100px;
+	height: 90px;
+}	
+div ul{
+	list-style: none;
+}
+ul li{
+	margin: 10px;
+	align-items: center;
+}
+a{
+	text-decoration: none;
+	color: #eee;	
+}
+.sectionBusca{
+	display: flex;
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.conteinerFomulario{
+	display: flex;
+	justify-content: space-around;	
+	flex-wrap: wrap;
+}
+div form{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;	
+	padding: 20px; 
+}
+
+input{
+	margin-left: 10px;
+	padding: 10px;
+	outline: none;
+}
+.inputText{
+	border: 1px solid #212121;
+	border-radius: 3px;
+}
+.inputBotao{
+	border: 1px solid #4b89da;
+	border-radius: 3px;
+	background-color: #4b89da;
+	color: #eee;
+}
+section{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+}
+.divTabelaServiço{
+	display: flex;
+	background-color: #eee;	
+}
+.divTabelaServiço form{
+	display: flex;
+	flex-direction: column;
+
+}
+.conteinerLogin{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	background-color: #fff;
+	box-sizing: border-box;
+	border-radius: 5px;
+}
+.avisosFormulario{
+	color: #fff;
+	background-color: #4B89DA;
+	box-sizing: border-box;
+	padding: 10px;
+}
+/*Formulario*/
+input{
+	height: 40px;
+	outline: none;
+	opacity: 1;
+	margin: 10px;
+}
+/*Estilo e comportamente dos inputs text Menores*/
+.inputtextMenor{
+	width: 350px;
+	padding: 10px;
+	border-top: none;
+	border-bottom: solid 1px #4b89da;
+	border-left: none;
+	border-right:none;
+	font-size: 12pt;
+	transition: all 0.5s;
+	background-color: transparent; 
+}
+.inputtextMenor:hover{
+	background-color: #e5e8ec;
+	transition: all 0.5s;
+}
+.inputtextMenor:focus{
+	background-color: #e5e8ec;
+	transition: all 0.5s;
+}
+textarea{
+	width: 350px;
+	height: 150px;
+}
+/*Estilo e comportamente do input botão submit*/
+.botaoSubmit{
+	width: 90px;
+	background-color: #4b89da;
+	border: 1px solid #4b89da; 
+	border-radius: 5px;
+	font-size: 14;
+	color: #fff;
+	transition: all 0.5s;
+}
+/*Estilo da area de aviso*/
+.botaoSubmit:hover{
+	background-color: #fff;
+	color:#4b89da; 
+	transition: all 0.5s;
+}
+
+.avisosFormulario{
+	color: #fff;
+	background-color: #4B89DA;
+	box-sizing: border-box;
+	padding: 10px;
+}
