@@ -1,29 +1,133 @@
+/*Estilo golbal*/
 body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
-	transition: all 0.8s;
-	height: 100vh;
+	background: linear-gradient(to bottom right,#fff, #4b89da);
+}
+/*Cabeçalho da página*/
+
+.header{
+	display: flex;
+	justify-content: space-between;
+}
+.header{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.header div .logo{
+	width: 100px;
+	height:90px;
+	position: absolute;
+}
+.nav ul {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+ul li{
+	margin-right: 10px;
+}
+li img{
+	width: 32px;
+	height: 32px;
+	transition: 0.3s;
+}
+a:hover,
+img:hover{
+	width: 48px;
+	height: 48px;
+	transition: 0.3s;
 }
 header{
 	display: flex;
+	justify-content: flex-end;
 }
-header a{
-	margin-left: 10%;
+header nav{
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: 5%;
 }
-header a img{
-	width: 100px;
-	height: 90px;
+nav ul{
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+li a{
+	text-decoration: none;
+	color: #000;
+	font-size: 14pt;
+	transition: 0.3s;
+}
+li a:hover{
+	font-size: 16pt;
+	border-bottom: 1px solid #4b89da;
+	transition: 0.3s;
+}
+section{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 100px;
+}
+.mensagemInicial{
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+}
+p{	
+	text-align: justify;
+	font-size: 16pt;
+	color: #000;
+}
+span{
+	font-size: 18pt;
+	font-weight: bold;
+}
+p .img2{
+	width: 200px;
+	height: 200px;
+}
+div .img{
+	width: 400px;
+	height: 500px;
+}
+@media(max-width:1024px ){
+	p{
+		font-size: 14pt;
+	}
+	span{
+		font-size: 16pt;
+	}
+	p .img2{
+		width: 200px;
+		height: 200px;
+	}
+	div .img{
+	width: 300px;
+	height: 400px;
+}
 }
 
-
-
-
-
-
-
-
-
+@media(max-width:610px ){
+	section{
+		padding: 20px;
+		padding-bottom: 150px;
+	}
+	p{
+		font-size: 12pt;
+	}
+	span{
+		font-size: 14pt;
+	}
+	p .img2{
+		width: 100px;
+		height: 100px;
+	}
+	div .img{
+	display: none;
+}
+}
 
 
 

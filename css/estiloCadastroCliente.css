@@ -21,6 +21,7 @@ header a img{
 section{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	box-sizing: border-box;
 }
 .conteinerLogin{
@@ -30,8 +31,28 @@ section{
 	background-color: #fff;
 	box-sizing: border-box;
 	border-radius: 5px;
+	margin:20px;
 }
-/*MENSAGENS DE ERROR E SECESSO*/
+/*Estilo da area de aviso*/
+.avisosFormulario{
+	color: #fff;
+	background-color: #4B89DA;
+	box-sizing: border-box;
+	padding: 10px;
+}
+
+span{
+	font-weight: 1px;
+	font-size: 20pt;
+}
+p{
+	font-weight: 1px;
+	font-size: 16pt;
+}
+ul li{
+	padding: 5px;
+}
+/*MENSAGENS DE ERROR E SUCESSO*/
 .conteinerMensagemErrorSucesso{
 	width: 100%;
 	margin: auto;
@@ -39,28 +60,15 @@ section{
 	margin: auto;
 	border-radius: 1px solid;
 }
-.mensagemErrorSucesso{
-	text-align: center;
-	color: #eee;
-	padding: 10px;
-	box-sizing: border-box;
-}
 .iconMensagemErrorSucesso{
-	
 	height: 40px;
 	text-align: center;
 	color: #eee;
 	padding: 10px;
 	box-sizing: border-box;
 }
-.sucCorMesnsagem{
-	background-color: rgb(63, 180, 110);
-}
 .sucCorMesnsagemV{
 	background-color: rgb(50, 159, 94);
-}
-.errorCorMesnsagem{
-	background-color: rgb(198, 68, 68);
 }
 .errorCorMesnsagemX{
 	background-color: rgb(169, 13, 14);
@@ -127,25 +135,6 @@ input{
 	background-color: #fff;
 	color:#4b89da; 
 	transition: all 0.5s;
-}
-
-.avisosFormulario{
-	color: #fff;
-	background-color: #4B89DA;
-	box-sizing: border-box;
-	padding: 10px;
-}
-
-span{
-	font-weight: 1px;
-	font-size: 20pt;
-}
-p{
-	font-weight: 1px;
-	font-size: 16pt;
-}
-ul li{
-	padding: 5px;
 }
 /*Rodape da pagina*/
 footer{

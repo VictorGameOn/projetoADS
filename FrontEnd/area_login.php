@@ -1,5 +1,6 @@
 <?php
     session_start();
+    session_destroy();
     include "../BackEnd/conexao.php";
 ?>
 <!DOCTYPE html>
@@ -9,29 +10,27 @@
 		<meta name="viewport" content="width=width-device, initial-scale=1, shrink-to-fit=no">
 		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="../css/estiloLoginAdm.css">
-		<link rel="stylesheet" type="text/css" href="../BackEnd/verifica_login.php">
 		<title>Login</title>
 	</head>
 	<body>
-		<!--Inicio do Cabeçalho -->
-		<header>
-			<a href="index.html"><img src="../img/gatLogo.png"></a>
-		</header>
-		<!--Fim do Cabeçalho -->
 		<!--Inicio da section-->
 		<section>
 			<!--Inicio do Conteiner -->
 			<div class="conteinerLogin">
 				<p><!--Titulo do Conteiner -->
-					Faça o login
+					<img src="../img/gatLogo.png">
 				</p>
 				<!--Mensagem de ERROR -->
 				<?php
                     if(isset($_SESSION['nao_autenticado'])):
                 ?>
 				<div class="errorLogin">
-					<div class="closeX"><i class="fas fa-times-circle"></i></div>
-					<div class="closeError">Erro!!!! Usuário ou Senha incorreto.</div>
+					<div class="closeX">
+						<i class="fas fa-exclamation-triangle"></i>
+					</div>
+					<div class="closeError">
+						Erro!!!! Usuário ou Senha incorreto.
+					</div>
 				</div>
 				<?php
                     endif;
@@ -41,7 +40,7 @@
 				<form action="../BackEnd/login.php" method="POST">
 					<input class="campoDigitar" type="text" name="login" placeholder="Usuário" required="">
 					<input class="campoDigitar" type="password" name="senha" placeholder="Senha" required="">
-					<button class="botaoSubmit" type="submit">Logar</button>
+					<input class="botaoSubmit" type="submit" name="logar" value="Entrar">
 				</form><!--Fim do formulario -->
 			</div><!--Fim do conteiner -->
 		</section>
@@ -52,5 +51,6 @@
 				&copy;SoftwareMaker
 			</div>
 		</footer><!--Fim do footer-->
+		<script src="https://kit.fontawesome.com/c4cf45b7a7.js" crossorigin="anonymous"></script>
 	</body>
 </html>

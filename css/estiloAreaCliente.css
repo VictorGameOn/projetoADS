@@ -1,23 +1,21 @@
-body{
+*{
+	box-sizing: border-box;
+}
+.body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
 	transition: all 0.8s;
 	box-sizing: border-box;
-	background-color: #eee;
+	background: linear-gradient(#fff, #4b89da);
 }
-*{
-	box-sizing: border-box;
-}
-
-header{
-	display: flex;
-}
-nav{
+/*---------------------------------------------------------------------------*/
+/*Menu Estilo*/
+.nav{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	background-color: #212121;
 	color: #eee;
 	box-sizing: border-box;
@@ -31,83 +29,97 @@ div ul{
 }
 ul li{
 	margin: 10px;
-	align-items: center;
 }
-a{
+li a{
 	text-decoration: none;
 	color: #eee;	
+	transition: all 0.3s;
+	cursor: pointer;
 }
-.sectionBusca{
+a:hover{
+	color: #4B89DA;
+	transition: all 0.3s;
+}
+/*---------------------------------------------------------------------------*/
+.section{
 	display: flex;
-	box-sizing: border-box;
-	background-color: #fff;
-}
-.conteinerFomulario{
-	display: flex;
-	justify-content: space-around;	
-	flex-wrap: wrap;
-}
-div form{
-	display: flex;
-	align-items: center;
-	flex-wrap: wrap;	
-	padding: 20px; 
-}
-
-input{
-	margin-left: 10px;
-	padding: 10px;
-	outline: none;
-}
-.inputText{
-	border: 1px solid #212121;
-	border-radius: 3px;
-}
-.inputBotao{
-	border: 1px solid #4b89da;
-	border-radius: 3px;
-	background-color: #4b89da;
-	color: #eee;
-}
-section{
-	display: flex;
-	justify-content: space-around;
+	justify-content:center;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 }
-.divTabelaServiço{
-	display: flex;
-	background-color: #eee;	
-}
-.divTabelaServiço form{
-	display: flex;
-	flex-direction: column;
 
-}
-.conteinerLogin{
+.conteiner{
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	background-color: #fff;
 	box-sizing: border-box;
 	border-radius: 5px;
+	margin: 20px;
 }
+/*Estilo da area de aviso*/
 .avisosFormulario{
 	color: #fff;
 	background-color: #4B89DA;
 	box-sizing: border-box;
 	padding: 10px;
 }
-/*Formulario*/
-input{
-	height: 40px;
-	outline: none;
-	opacity: 1;
-	margin: 10px;
+span{
+	font-weight: 1px;
+	font-size: 20pt;
 }
-/*Estilo e comportamente dos inputs text Menores*/
+p{
+	font-weight: 1px;
+	font-size: 16pt;
+}
+ul li{
+	padding: 5px;
+}
+/*MENSAGENS DE ERROR E SUCESSO*/
+.conteinerMensagemErrorSucesso{
+	width: 100%;
+	margin: auto;
+	height: 40px;
+	margin: auto;
+	border-radius: 1px solid;
+}
+.iconMensagemErrorSucesso{
+	height: 40px;
+	text-align: center;
+	color: #eee;
+	padding: 10px;
+	box-sizing: border-box;
+}
+.sucCorMesnsagemV{
+	background-color: rgb(50, 159, 94);
+}
+.errorCorMesnsagemX{
+	background-color: rgb(169, 13, 14);
+}
+.divTabelaServiço{
+	display: flex;
+	flex-direction: column;
+	background-color: #eee;	
+	margin: 20px;
+}
+/*---------------------------------------------------------------------------*/
+/*Formulario*/
+form{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;	
+	padding: 20px; 
+}
+.input{
+	padding: 10px;
+	outline: none;
+	
+}
+
+/*Estilo e comportamente dos inputs de text*/
 .inputtextMenor{
-	width: 350px;
+	width: 100%;
 	padding: 10px;
 	border-top: none;
 	border-bottom: solid 1px #4b89da;
@@ -128,7 +140,10 @@ input{
 textarea{
 	width: 350px;
 	height: 150px;
+	border: solid 1px #4b89da;
+	padding: 5px;
 }
+
 /*Estilo e comportamente do input botão submit*/
 .botaoSubmit{
 	width: 90px;
@@ -139,16 +154,148 @@ textarea{
 	color: #fff;
 	transition: all 0.5s;
 }
-/*Estilo da area de aviso*/
 .botaoSubmit:hover{
 	background-color: #fff;
 	color:#4b89da; 
 	transition: all 0.5s;
 }
+/*---------------------------------------------------------------------------*/
+/*-- Modal + Tabela --*/
+.modalMeusServicos{
+	background-color: #212121;
+	color: #eee;
+}
+.xColor{
+	color: #eee;
+}
+.table{
+	width: 90%;
+	border-collapse: collapse;
+}
+.table td,.table th{
+  padding:10px 10px;
+  text-align: center;
+  font-size:14px;
+}
 
-.avisosFormulario{
-	color: #fff;
-	background-color: #4B89DA;
-	box-sizing: border-box;
-	padding: 10px;
+.table th{
+	background-color: #212121;
+	color:#eee;
+}
+.table tbody tr{
+	background-color: #eee;
+}
+.table tbody tr:nth-child(even){
+	background-color: #f5f5f5;
+}
+/*responsive*/
+@media(max-width: 995px){
+	.table thead{
+		display: none;
+	}
+
+	.table, .table tbody, .table tr, .table td{
+		display: block;
+		width: 100%;
+	}
+	.table tr{
+		margin-bottom:10px;
+	}
+	.table td{
+		text-align: right;
+		padding-left: 50%;
+		text-align: right;
+		position: relative;
+	}
+	.table td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:10px;
+		font-size:12px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+/*---------------------------------------------------------------------------*/
+/*Estilo do comportamente responsivo da pagina-tablet*/
+@media(max-width: 1210px){
+	.conteinerLogin{
+		width: 100%;
+	}
+	.avisosFormulario{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.divTabelaServiço{
+		width: 69%;
+		flex-direction: column;
+		background-color: #eee;	
+	}
+	.inputtextMenor{
+		width: 100%;
+		padding: 5px;
+		font-size: 10pt; 
+	}
+	textarea{
+		width: 100%;
+		padding: 5px;
+		font-size: 10pt;
+	}
+	span{
+		font-weight: 1px;
+		font-size: 16pt;
+	}
+	p{
+		font-weight: 1px;
+		font-size: 12pt;
+	}
+	ul li{
+		padding: 5px;
+	}
+}
+@media(max-width: 615px){
+	.inputtextMenor{
+		width: 100%;
+		padding: 5px;
+		font-size: 10pt; 
+	}
+	
+	textarea{
+		width: 100%;
+		padding: 5px;
+		font-size: 10pt;
+	}
+}
+/*---------------------------------------------------------------------------*/
+/*Estilo do comportamente responsivo da pagina-mobile*/
+@media(max-width: 400px){
+	.divTabelaServiço{
+		width: 100%;
+	}
+	.avisosFormulario{
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.inputtextMenor{
+		width: 100%;
+		padding: 5px;
+		font-size: 10pt; 
+	}
+	span{
+		font-weight: 1px;
+		font-size: 16pt;
+	}
+	p{
+		font-weight: 1px;
+		font-size: 12pt;
+	}
+	ul li{
+		padding: 5px;
+	}
+	textarea{
+		width: 100%;
+		height: 150px;
+	}
 }

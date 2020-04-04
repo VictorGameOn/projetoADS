@@ -5,7 +5,7 @@ body{
 	font-family: 'Roboto';
 	transition: all 0.8s;
 	height: 100vh;
-	background: linear-gradient(#fff, #4b89da);
+	background: linear-gradient(to bottom right,#fff, #4b89da);
 }
 /*Cabeçalho da página*/
 header{
@@ -43,13 +43,13 @@ p{
 /*Estilo da mensagem de Error */
 .errorLogin{
 	display: flex;
-	width: 350px;
-	height: 40px;
+	width: 100%;
 	margin: auto;
 	background-color: rgb(198, 68, 68);
 	border-radius: 1px solid;
 }
 .closeError{
+	width: 100%;
 	text-align: center;
 	color: #eee;
 	padding: 10px;
@@ -57,7 +57,6 @@ p{
 }
 .closeX{
 	width: 40px;
-	height: 40px;
 	text-align: center;
 	color: #eee;
 	padding: 10px;
@@ -100,11 +99,11 @@ input{
 }
 /*Comportamento da animação dos campos de texto*/
 .campoDigitar:hover{
-	background-color: #e5e8ec;
+	background-color: #f4f6f9;
 	transition: all 0.5s;
 }
 .campoDigitar:focus{
-	background-color: #e5e8ec;
+	background-color: #f4f6f9;
 	transition: all 0.5s;
 }
 /*Animação do batão 'Entrar'*/
@@ -141,11 +140,4 @@ footer div{
 	.botaoSubmit{
 		margin-top: 20px;
 	}
-}
-button{
-	height:30px;
-	margin:5px;
-}
-i{
-	color: white;
 }

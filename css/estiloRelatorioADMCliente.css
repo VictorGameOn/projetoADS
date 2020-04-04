@@ -5,7 +5,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Roboto';
-	transition: all 0.8s;
+	transition: all 0.3s;
 	box-sizing: border-box;
 	background-color: #fff;
 }
@@ -26,6 +26,9 @@
 img{
 	width: 100px;
 	height: 90px;
+}
+.lista{
+	margin-right: 5%;
 }	
 .lista ul{
 	display: flex;
@@ -38,7 +41,7 @@ ul li{
 .adm{
 	width: 100%;
 }
-ul li a{  
+li a{
 	text-decoration: none;
 	color: #eee;	
 	transition: all 0.3s;
@@ -50,14 +53,13 @@ a:hover{
 /*---------------------------------------------------------------------------*/
 .sectionBusca{
 	display: flex;
-	justify-content: center;
 	box-sizing: border-box;
 	background-color: #eee;
 }
 .conteinerFomulario{
 	display: flex;
+	justify-content: space-between;
 	flex-wrap: wrap;
-	box-sizing: border-box;
 }
 /*---------------------------------------------------------------------------*/
 /*Formulario*/
@@ -98,9 +100,9 @@ div form{
 }
 /*Estilo e comportamente do input botão submit*/
 .inputBotao{
-	border: 1px solid #4169e1;
+	border: 1px solid #4b89da;
 	border-radius: 3px;
-	background-color: #4169e1;
+	background-color: #4b89da;
 	color: #eee;
 	transition: all 0.5s;
 }
@@ -110,32 +112,15 @@ div form{
 	transition: all 0.5s;
 }
 /*Estilo e comportamente dos outros botões*/
-.button,
-.buttonDescrição{
-	background-color: #2c3e50;
-	border: 1px solid #2c3e50;
-}
-.salvarButton{
-	background-color: #2e8b57;
-	border: 1px solid #2e8b57;
-	margin-left: 5px;
-	transition: all 0.5s;
-}
-.button,
-.buttonDescrição,
-.salvarButton{
+.button{
 	outline: none;
+	border: 1px solid #2c3e50;
 	border-radius: 3px;
+	background-color: #2c3e50;
 	color: #eee;
 	transition: all 0.5s;
 }
-.salvarButton:hover{
-	border: 1px solid #228b22;
-	background-color: #228b22;
-	transition: all 0.5s;
-}
-.button:hover,
-.buttonDescrição:hover{
+.button:hover{
 	border: 1px solid #48647c;
 	background-color: #48647c;
 	transition: all 0.5s;
@@ -161,10 +146,7 @@ div form{
 /*---------------------------------------------------------------------------*/
 /*--Estilo do Modal e das Tabelas --*/
 .modalInformacoaCliente{
-	background-color: #212121;
-	color: #eee;
-}
-.xColor{
+	background-color: #4b89da;
 	color: #eee;
 }
 .tabelaSeviçCliente{
@@ -216,8 +198,6 @@ div form{
 		text-align: right;
 		padding-left: 50%;
 		text-align: right;
-	
-		line-break:auto;
 	}
 	.table td::before{
 		content: attr(data-label);

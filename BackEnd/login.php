@@ -21,7 +21,7 @@ $row3 = mysqli_fetch_array($result2);
 #-------TESTANDO SE É ADMIN-----------
 if($row == 1){
 	$_SESSION['usuario'] = $login_;
-	header('Location: ../FrontEnd/area_adm.php');
+	header('Location: ../FrontEnd/relatorio_servico.php');
 	exit();
 #----------TESTANDO SE É CLIENTE----------
 }elseif($row2 == 1){

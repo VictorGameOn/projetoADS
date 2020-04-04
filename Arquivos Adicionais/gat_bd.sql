@@ -65,8 +65,13 @@ CREATE TABLE `cliente` (
 --
 
 INSERT INTO `cliente` (`id_cliente`, `nome_cliente`, `sobrenome_cliente`, `nickname_cliente`, `fone1_cliente`, `fone2_cliente`, `email_cliente`, `senha_cliente`) VALUES
-(1, 'Victor', 'Falcão', 'Vic', '(87)9.9920-1888', '(87)9.8111-9313', 'victorfalcao33@gmail.com', '202cb962ac59075b964b07152d234b70'),
-(2, 'Ze', 'da Silva', 'zzz', '(87)9.9917-1048', '(87)9.8109-5213', 'ze@gmail.com', '202cb962ac59075b964b07152d234b70');
+(1, 'Victor', 'Falcão', 'victor', '(87)9.9920-1888', '(87)9.8111-9313', 'victorfalcao33@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(2, 'Ze', 'da Silva', 'xxx', '(87)9.9917-1048', '(87)9.8109-5213', 'ze@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(3, 'wil', 'hawk', 'wil', '(87)9.96620-188', '(87)9.8130-9313', 'www@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(4, 'daniely', 'domingos', 'dani', '(87)9.9966-5588', '(87)9.8125-9510', 'dani@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(5, 'vinicios', 'silva', 'vini', '(87)9.99220-187', '(87)9.8251-9313', 'vini@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(7, 'Max', 'Winter', 'maxxx', '(81)9.9285-4218', '(81)9.8854-9852', 'maxwinter@gmail.com', '202cb962ac59075b964b07152d234b70'),
+(8, 'gustavo', 'batista', 'gugu', '(95)9.9856-1202', '(95)9.2056-1296', 'gugu@gmail.com', '202cb962ac59075b964b07152d234b70');
 
 -- --------------------------------------------------------
 
@@ -86,6 +91,18 @@ CREATE TABLE `servico` (
   `statos_servico` varchar(100) NOT NULL,
   `data_time_servico` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `servico`
+--
+
+INSERT INTO `servico` (`id_servico`, `id_cliente`, `cod_servico`, `modelo_servico`, `imei1_servico`, `imei2_servico`, `cor_servico`, `defeito_servico`, `statos_servico`, `data_time_servico`) VALUES
+(1, 1, '4a5e2d9c', 'J3', 123456789012345, 543210987654321, 'preto', 'touch', 'ok', '2020-03-18 21:47:38'),
+(2, 4, '85e9bca0', 'Moto G3', 123456789012345, 123456789032154, 'branco', 'touch', 'em andamento', '2020-03-11 08:27:19'),
+(3, 2, '9ac60b55', 'J1 mini', 123456789012347, 185246798215045, 'dourado', 'microfone', 'pronto', '2020-03-30 12:13:08'),
+(4, 3, 'ed4785ca', 'LG B220', 123456789012345, 125158021548750, 'preto', 'teclado', 'pronto', '2020-03-01 15:13:16'),
+(5, 5, '87edc45a', 'S10', 123456789012345, 852852852852741, 'preto', 'placa', 'aguardando peças', '2020-04-02 12:13:55'),
+(6, 1, '4bd4a023', 'Mi A2', 111111111111111, 123456789012334, 'Dourado', 'placa', 'AGUARDANDO ORÇAMENTO', '2020-04-02 17:46:34');
 
 --
 -- Índices para tabelas despejadas
